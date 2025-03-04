@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Budget</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fa-solid fa-wallet"></i> Gestionnaire de Budget</h1>
+    </header>
+
+   
+    <section id="auth-section">
+        <h2>🔐 Connexion / Inscription</h2>
+        <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="password" placeholder="Mot de passe" required>
+        <button id="register-btn">Créer un compte</button>
+        <button id="login-btn">Se connecter</button>
+        <p id="user-status"></p>
+        <button id="logout-btn" style="display: none;">Se déconnecter</button>
+
+    </section>
+
+   
+    <section id="income-section">
+        <h2><i class="fas fa-money-bill-wave"></i> Revenu Mensuel</h2>
+        <input type="number" id="income-input" placeholder="Entrez votre revenu (€)">
+        <button id="set-income-btn">Définir</button>
+        <p>💰 Solde restant : <span id="remaining-balance">0 €</span></p>
+    </section>
+
+    
+    <section id="expense">
+        <h2><i class="fas fa-plus-circle"></i> Ajouter une dépense</h2>
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Nom dépense" required>
+            <input type="number" id="expense-amount" placeholder="Montant (€)" required>
+            <select id="expense-category">
+                <option value="courses">🛒 Courses</option>
+                <option value="transport">🚕 Transport</option>
+                <option value="loisirs">🎮 Loisirs</option>
+                <option value="autre">📝 Autre</option>
+            </select>
+            <input type="date" id="expense-date" required>
+            <button type="submit">Ajouter</button>
+        </form>
+    </section>
+
+    
+    <section id="expense-list">
+        <h2>📋 Liste des Dépenses</h2>
+        <ul id="expense-ul"></ul>
+    </section>
+
+    
+    <section id="expense-total">
+        <h2><i class="fas fa-coins"></i> Total des Dépenses</h2>
+        <p id="total-amount">0 €</p>
+    </section>
+
+    
+    <section id="stats">
+        <h2>📊 Statistiques</h2>
+        <canvas id="expenseChart"></canvas>
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

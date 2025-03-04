@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+:root {
+    --background-color: rgba(0, 0, 0, 0.85);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --text-color: white;
+    --primary-color: #ff7b00;
+    --secondary-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --dropdown-text-color: white;
+    --dropdown-bg-color: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: url("https://i.ibb.co/Qjt7TJn/milad-fakurian-E8-Ufcyxz514-unsplash-1.jpg") center / cover no-repeat fixed;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+header button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background: #ff5700;
+}
+
+
+section {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--background-color);
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+}
+
+select {
+    color: var(--dropdown-text-color);
+    background: var(--dropdown-bg-color);
+}
+
+select option {
+    background: var(--dropdown-bg-color);
+    color: var(--dropdown-text-color);
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5700;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--secondary-color);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+canvas {
+    width: 100%;
+    max-width: 400px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+
+.card-footer {
+    font-size: 14px;
+    opacity: 0.8;
+    color: white;
+    margin-top: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
